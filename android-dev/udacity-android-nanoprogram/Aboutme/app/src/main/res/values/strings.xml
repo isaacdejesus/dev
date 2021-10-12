@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">About me</string>
+    <string name="name">Isaac Reyes</string>
+    <string name="yellow_star">Yellow star</string>
+    <string name="bio">
+        Hello, my name is isaac, I am currently attempting to learn android dev
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+        \n\nWork in progress
+
+    </string>
+</resources>
