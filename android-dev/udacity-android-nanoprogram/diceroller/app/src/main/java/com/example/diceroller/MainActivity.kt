@@ -8,6 +8,9 @@ import android.widget.TextView
 import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
+    //saves reference to images in a field leading to performance gain since
+    //no longer need to call findviewbyid every time dice is rolled.
+    lateinit var diceImage: ImageView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             //calls function rollDice whenever button is clicked
             rollDice()
         }
+        diceImage = findViewById(R.id.dice_image)
     }
 
     private fun rollDice() {
@@ -34,7 +38,6 @@ class MainActivity : AppCompatActivity() {
             5-> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        val diceImage: ImageView = findViewById(R.id.dice_image)
         //set/change image displayed by view to values/image obtained from when statement
         diceImage.setImageResource(drawableResource)
     }
