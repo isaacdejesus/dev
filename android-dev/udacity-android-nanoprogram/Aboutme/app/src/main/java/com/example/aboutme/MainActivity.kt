@@ -13,11 +13,16 @@ class MainActivity : AppCompatActivity() {
     //data binding creates an object that allows us to access views directly without having
     //to go through view hierarchy in order to find the view
     private lateinit var binding: ActivityMainBinding
+    //create an instance of the MyName class
+    //set a value to the name variable
+    private val myName: MyName = MyName("Isaac Reyes")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
         //bind the object to activity main view hierarchy
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        //binding instance?
+        binding.myName = myName
         //when button is clicked, addNickname function is called
         //views are accessed simply by binding.viewId, where id = view_id
         binding.doneButton.setOnClickListener {
@@ -29,7 +34,8 @@ class MainActivity : AppCompatActivity() {
     {
         binding.apply {
             //set text to value entered by user
-            nicknameText.text = binding.nicknameEdit.text
+            //nicknameText.text = binding.nicknameEdit.text
+            myName?.nickname = nicknameEdit.text.toString()
             invalidateAll()
             //hide field and button
             nicknameEdit.visibility = View.GONE
