@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Basic document flow</title>
+
+    <style>
+      body {
+        width: 500px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      p {
+        background: aqua;
+        border: 3px solid blue;
+        padding: 10px;
+        margin: 10px;
+      }
+
+      span {
+        background: red;
+        border: 1px solid black;
+      }
+      .positioned-relative {
+          position: relative;  /* default is static */
+          top: 30px;
+          left: 30px;
+          background: yellow;
+      }
+      .positioned-absolute {
+          position: absolute;
+          top: 30px;
+          left: 30px;
+          background: green;
+      }
+
+      p:nth-of-type(1) {
+          position: absolute;
+          background: lime;
+          top: 10px;
+          right: 30px;
+          z-index: 1;
+      }
+                                            
+    </style>
+  </head>
+  <body>
+    <h1>Basic document flow</h1>
+
+    <p>The z index can be used to position items on the z axis. By default positioned elements
+    have a z-index set to auto -> 0. By default elements coming later in the documents
+    overlap previous elements. Currently, this p is being overlapped by next p. Setting this p
+    z index to 1 will cause this p to float over other p.</p>
+
+    <p class="positioned-relative">Paragraph is aligned used position: relative. Position can be controlled using top, left, right, bottom. 
+    This P is positioned using top: 30px and left: 30px. Relative position, floats element relative to original position.</p>
+
+    <p class="positioned-absolute">Paragraph is positioned using position: absolute; In absolute positioning, the positioning is in relation 
+    to parent element. Due to element is taken out from normal flow and neighboring elements take over space left behind by absolute element
+     . If no ancestors have their position defined then the default parent/contained against which absolute items will be positioned is
+     the html element. Here, we will set the body's position: relative;, this will cause p to be positioned relative to body.</p>
+
+    <p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+
+  </body>
+</html>

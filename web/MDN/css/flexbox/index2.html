@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox align 0 — starting code</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        width: 70%;
+        max-width: 960px;
+        margin: 20px auto;
+      }
+
+      button {
+        font-size: 18px;
+        line-height: 1.5;
+        width: 15%;
+      }
+
+      div {
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      /* Add your flexbox CSS below here */
+      div {
+          display: flex;
+          align-items: center; /*controls where items sit on cross axis. Default is stretch*/
+          justify-content: space-around; /*controls where items sit on main axis. default is flex-start.
+                                          other value: flex-end, justify-content, space-around, space-between*/
+      }
+        /*overrides align-items. Allows individual items to align as needed.
+          flex-start and flex-end allow item to align at start/end of cross axis.
+          in our case cross axis is vertically. main axis is horizontal -> natural flow of items.
+          */
+      button:first-child{
+          align-self: flex-end;
+      }
+
+      /*Default flex items have order == 0. Items with higher order appear later in display order
+       Items with same value will appear based in display order
+      Ex-> 4 items with following order: 2 1 1 0. 
+      Display order would be:4th, 2nd, 3rd and 1st.
+       3rd appears before 2nd due to having same valur and coming after 2nd in source order
+       */
+      button:first-child {
+          order: 1; /*sets first button to have highest order. It will be display last*/
+      }
+
+      button:last-child {
+          order: -1; /*sets last button to lowest priority, be displayed first*/
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div>
+      <button>Smile</button>
+      <button>Laugh</button>
+      <button>Wink</button>
+      <button>Shrug</button>
+      <button>Blush</button>
+    </div>
+  </body>
+</html>

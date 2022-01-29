@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Multicol starting point</title>
+    <style>
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+            font: .9em/1.2 Arial, Helvetica, sans-serif;
+        }
+        .container {
+            column-count: 3; /*number of cols is auto*/
+            column-gap: 20px;
+            column-rule: 4px dotted gray;
+            /*column-width: 200px; /*create as many cols as possible of 200px */
+        }
+        h2 {
+            column-span: all;
+            background: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Simple multicol example</h1>
+        <h2> column-span: all; property can be added to an element within cols/parent
+            to cut across all cols.</h2>
+
+        <p> Two different ways to create cols. column-count: #; divides up space between the # of specified cols.
+            column-width: 200px; create as many cols of 200px as possible.
+            Individual cols can not be styled. 
+            column-gap can be used to control gap between cols
+            column-rule adds a rule between cols. similar to border.
+            takes 3 values, size, type, color.
+
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.
+            Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+            laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
+            egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam
+            erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare
+            egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum
+            sapien.</p>
+
+        <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere
+            sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+            tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu
+            urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+            penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    </div>
+</body>
+
+</html>
