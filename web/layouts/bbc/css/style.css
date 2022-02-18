@@ -22,19 +22,19 @@
 /*******************************************/
 
 body {
-    border: 1px red solid;
 
 }
 
-
+h4 {
+    margin-bottom: 2px;
+}
 /******************************************
 /* LAYOUT
 /*******************************************/
 header {
     background-color: black;
-    border: 1px blue solid;
     height: 40px;
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 
@@ -45,7 +45,55 @@ footer {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+.big-left {
+    height: 100%;
+    width: 99%;
+}
+.small-img {
+    height: 100%;
+    width: 99%;
+}
+.small-section img {
+    object-fit: cover;
+}
+.big-left img{
+    object-fit: cover;
+}
 
+.big-section {
+    width: 100%;
+}
+.header-1, .header-2 {
+    float: left;
+    width: 50%;
+}
+.header-2 {
+    text-align: right;
+}
+.left {
+    width: 50%;
+    height: 350px;
+    float: left;
+    position: relative;
+}
+section .pd-top {
+    margin-top: 1%;
+}
+.right {
+    width: 50%;
+    height: 350px;
+    float: left;
+    position: relative;
+}
+.small-section {
+    height: 49%;
+    width: 48%;
+    float: left;
+    margin: 0 1%;
+    padding: 0 ;
+    position: relative;
+
+}
 .solid-bg{
     height: 30px;
     width: 8%;
@@ -63,16 +111,53 @@ footer {
     float: left;
     height: 30px;
 }
-.test{
-    height: 500px;
-    border: 9px solid green;
+
+.titles {
+    width: 100%;
+    margin: auto;
+}
+.top-left {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+.top-right {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+.bottom-left {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.bottom-right {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+.left-text {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.last{
+    height: 400px;
+    width: 33.3333%;
+    float: left;
+    padding: 0 10px;
+} 
+
+.last img {
+    height: 200px;
 }
 
 li {
     width: 6%;
     background-color: black;
     float: left;
-    border-right: 1px white dotted;
     vertical-align: middle;
 }
 a{
