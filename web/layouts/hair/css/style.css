@@ -77,8 +77,103 @@ header {
 }
 
 .big{
-    background-image: url("bbc-image.png");
-    height: 200px;
+    background-image: url("../images/pearl.jpg");
+    border: blue 2px solid;
+}
+.inner {
+    width: 70%;
+    margin: 100px auto;
+    border: blue 2px solid;
+}
+.small-inner{
+    width: 20%;
+    background: black;
+    color: white;
+}
+
+.large {
+    font-size: 3rem;
+}
+
+.middle {
+    width: 70%;
+    margin: auto;
+    text-align: center;
     border: blue 2px solid;
 }
 
+.thirds {
+    float: left;
+    width: 33.333%;
+    margin-top: 50px;
+}
+
+.small-img {
+    height: 40px;
+    width: 50px;
+
+}
+
+.next-section {
+    background: silver;
+    width: 100%;
+}
+
+.stuff{
+    width: 65%;
+    margin: auto;
+}
+.left, .right {
+    float: left;
+    width: 50%;
+}
+
+.some-img {
+    width: 75%;
+    height: 150px;
+}
+
+.with-bg-img{
+    width: 65%;
+    background-image: url("../images/pearl.jpg");
+    margin: auto;
+}
+.gallery {
+    width: 65%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.left-panel{
+    float: left;
+    width: 33.333%;
+}
+
+.left-one {
+    height: 200px;
+    width:55%;
+    margin-bottom: 5px;
+}
+
+.left-two {
+    height: 400px;
+    width: 55%;
+    margin-top: 5px;
+}
+
+.middle-panel {
+    float: left;
+    width: 33.33%;
+}
+
+.middle-one{
+    height: 400px;
+    width: 55%;
+    margin-bottom: 5px;
+}
+
+.middle-two {
+    height: 200px;
+    width: 55%;
+    margin-top:5px;
+}
