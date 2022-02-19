@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+    <style>
+        .highlight {
+        color: white;
+        background: black;
+        padding: 10px;
+        width: 250px;
+        text-align: center;
+        }
+    </style>
+
+  </head>
+  <body>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
+      </section>
+      <script>
+          //Target the a tag and change text and href
+          const link = document.querySelector('a');
+          link.textContent = "Mozilla Dev Network";
+          link.href = 'https://developer.mozilla.org';
+          //creating a new node
+          const sect = document.querySelector('section');
+          const para = document.createElement('p');
+          para.textContent = "We just added this short p to the page using the dom!";
+          sect.appendChild(para); //append p to the section
+          //now we will target the p containing the <a> and add to it
+          const text = document.createTextNode(' -I was added using thee dom yo');
+          const linkPara = document.querySelector('p'); //will select first p it finds.
+          linkPara.appendChild(text);
+          //moving and removing elements
+          sect.appendChild(linkPara); //Will move the p containing link to the botton of the section
+          //remove element
+          //sect.removeChild(linkPara);
+          //linkPara.remove(); //not supported in older browsers
+          //to do the above in older browsers
+          //linkPara.parentNode.removeChild(linkPara);
+
+          //Change styling
+          //Inline styling
+          //para.style.color = "white";
+          //para.style.backgroundColor = "black";
+          //para.style.padding = '10px';
+          //para.style.width = '250px';
+          //para.style.textAlign = 'center';
+
+          //Set attribute can be used instead of inline style in order to add a class of style
+          //see above. We created a class called highlight
+          para.setAttribute('class', 'highlight');  //same result as inline styling
+      </script>
+  </body>
+</html>
+
