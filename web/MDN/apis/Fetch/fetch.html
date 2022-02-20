@@ -73,9 +73,9 @@
         verse = verse.replace(" ", "");
         verse = verse.toLowerCase();
         let url = verse + '.txt';
-        fetch(url).then(function(response){
-            response.text().then(function(text){
-                poemDisplay.textContent = text;
+        fetch(url).then(function(response){     //.then is a promise. Result will be passed to next function once result is ready.
+            response.text().then(function(text){    //.text() function turns response into raw text. Pass text to next function
+                poemDisplay.textContent = text;     //next function takes response in text format and displays it
                                       });
                           });
               };
